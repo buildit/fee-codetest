@@ -1,0 +1,64 @@
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h1>Front End Engineer - Buildit Digital</h1>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="callout">
+        <h3>Thank you for taking the time to meet with our team.</h3>
+        <p>We have setup an incomplete app, and we need to add a few enhancements.</p>
+
+        <ul>
+          <li>We have too many answers, so we need to reduce the list down and update our test. (src/js/Applet.js)</li>
+          <li>We are missing a test for setData in src/js/Applet.js, but we do not want to test setQuestion or render.</li>
+          <li>We are missing a button for the logic of changing the question. Please add a styled button with transition when hovered over. The id is #next-question, but use a class to style (not a Foundation class either).</li>
+          <li>Our app does not have any error handling on the API (src/js/api). Please add it and call displayError with a string (src/js/error.js).</li>
+          <li>A app is never really complete, so what do you think it needs?</li>
+        </ul>
+
+        <p>This is a pairing session, so please feel free to chat with us. Here are some quick links to relevent documentation:</p>
+        <div class="grid-x grid-padding-x">
+          <div class="large-4 medium-4 cell">
+            <p><a href="http://foundation.zurb.com/docs">Foundation</a></p>
+          </div>
+          <div class="large-4 medium-4 cell">
+            <p><a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html">Sass</a></p>
+          </div>
+          <div class="large-4 medium-4 cell">
+            <p><a href="https://handlebarsjs.com/">Handlebars</a></p>
+          </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+          <div class="large-4 medium-4 medium-push-2 cell">
+            <p><a href="https://api.jquery.com/">jQuery</a></p>
+          </div>
+          <div class="large-4 medium-4 medium-pull-2 cell">
+            <p><a href="https://jasmine.github.io/api/3.3/global">Jasmine</a></p>
+          </div>
+          <div class="large-4 medium-4 medium-pull-2 cell">
+            <p><a href="https://sinonjs.org/">Sinon</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='error-callout' class="callout error">
+    <h5 id='error-text'>This is a secondary callout</h5>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div id='question-display'></div>
+    </div>
+  </div>
+</div>
+
+<script id='question-template' type='text/x-handlebars-template'>
+  <h3>\{{ question.title }}</h3>
+  \{{#each question.answers}}
+  <input id="answer-\{{ id }}" name='answers' type="radio">
+  <label for="answer-\{{ id }}">\{{ title }}</label>
+  \{{/each}}
+</script>
