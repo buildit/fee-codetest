@@ -6,7 +6,7 @@ import { hydrate } from './api';
 import Applet from './Applet';
 import Form from './Form';
 
-import { displayError, hideError } from './error';
+import { displayError, hideError } from './alert';
 
 // FOUNDATION
 window.jQuery = $;
@@ -15,8 +15,8 @@ $(document).foundation();
 
 // APP
 (() => {
-  let form   = new Form()
   let applet = new Applet();
+  let form   = new Form(applet);
 
   // Hydrate
   (async () => {

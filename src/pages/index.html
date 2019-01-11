@@ -14,8 +14,8 @@
         <ul>
           <li>We have too many answers, so we need to reduce the list down and update our test. (src/assets/js/Applet.js)</li>
           <li>We are missing a test for setData in src/assets/js/Applet.js, but we do not want to test setQuestion or render.</li>
-          <li>We are missing a button for the logic of changing the question. Please add a styled button with transition when hovered over. The id is #next-question, but use a class to style (not a Foundation class either).</li>
-          <li>Our app does not have any error handling on the API (src/assets/js/api). Please add it and call displayError with a string (src/assets/js/error.js).</li>
+          <li>We are missing a button for the logic of changing the question. Please add a styled button with transition when hovered over and is hidden by default. The id is #next-question, but use a class to style (not a Foundation class either).</li>
+          <li>Our app does not have any error handling on the API (src/assets/js/api). Please add it and call displayError with a string (src/assets/js/alert.js).</li>
           <li>A app is never really complete, so what do you think it needs?</li>
         </ul>
 
@@ -45,8 +45,11 @@
       </div>
     </div>
   </div>
+  <div id='success-callout' class="callout success">
+    <h5 id='success-text'></h5>
+  </div>
   <div id='error-callout' class="callout alert">
-    <h5 id='error-text'>This is a secondary callout</h5>
+    <h5 id='error-text'></h5>
   </div>
   <div class="grid-x grid-padding-x">
     <div class="large-12 cell">

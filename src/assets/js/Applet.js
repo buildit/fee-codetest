@@ -26,6 +26,15 @@ export default class {
     this.setAnswers(this.data.question);
   }
 
+  nextQuestion() {
+    if(!this.data.question) return this.setQuestion();
+    const index = this.data.questions.indexOf(this.data.question);
+    if(index === -1) return;
+    if(index + 2 >= this.data.questions.length) return;
+    this.setQuestion(this.data.questions[index + 1]);
+    this.render();
+  }
+
   setAnswers(question) {
     question.answers = this.data.answers;
   }
