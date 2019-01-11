@@ -28,7 +28,7 @@ describe('Applet', () => {
       // Expect style
       expect(applet.data.question.answers).to.equal(data.answers);
 
-      stub.reset();
+      stub.restore();
     });
   })
 })
